@@ -9,10 +9,18 @@
     "lint": "eslint .",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "test:ci": "vitest run"
+    "test:ci": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:migrate:sql": "node scripts/apply-sql-migrations.mjs",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.57.4",
+    "drizzle-orm": "^0.44.7",
     "next": "16.1.6",
+    "postgres": "^3.4.7",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
@@ -23,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "happy-dom": "^20.6.1",
